@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class SPlayerControl : MonoBehaviour
 {
     Animation spartanKing;
 
@@ -229,7 +229,7 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            if (spartanKing.IsPlaying("die") != true)
+            if (spartanKing.IsPlaying("idie") != true)
             {
                 if (spartanKing.IsPlaying("attack") != true)
                 {
