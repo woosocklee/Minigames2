@@ -23,7 +23,7 @@ public class SpartanKing3DActionCam : MonoBehaviour
 
     void CamMoveRot()
     {
-        Vector2 MouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y") );
+        Vector2 MouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y") ) * 1.2f;
         Vector3 Camangle = Camarm.rotation.eulerAngles;
         float xrot = Camangle.x - MouseDelta.y;
 
@@ -36,8 +36,8 @@ public class SpartanKing3DActionCam : MonoBehaviour
             xrot = Mathf.Clamp(xrot, 335f, 361f);
         }
 
-        Camarm.rotation = Quaternion.Euler(xrot, Camangle.y + MouseDelta.x , Camangle.z);
-        Charbody.rotation = Quaternion.Euler(Charbody.rotation.eulerAngles.x, Camangle.y + MouseDelta.x, Camangle.z);
+        Camarm.rotation = Quaternion.Euler(xrot, (Camangle.y + MouseDelta.x), Camangle.z);
+        Charbody.rotation = Quaternion.Euler(Charbody.rotation.eulerAngles.x, (Camangle.y + MouseDelta.x), Camangle.z);
         
     }
 

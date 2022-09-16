@@ -35,5 +35,9 @@ public class StartUI : MonoBehaviour
         {
             GameManager.gameManager.ChangeScene("11 SSSLogin");
         }
+        if (GUI.Button(new Rect((Screen.width / 2) - 100, (Screen.height / 2) + 90, 200, 30), "HideNSeek Game Start"))
+        {
+            GameManager.gameManager.ChangeScene("13 Hide_And_Seek");
+        }
     }
 }
