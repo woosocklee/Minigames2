@@ -65,7 +65,7 @@ public class RaycastSensors : MonoBehaviour
         {
             if (rayhit.collider != null)
             {
-                if (rayhit.collider.gameObject.CompareTag("Finish"))
+                if (rayhit.collider.gameObject.CompareTag("Finish") || rayhit.collider.CompareTag("LapLines"))
                 {
                     this.distance = this.maxdistance;
                 }

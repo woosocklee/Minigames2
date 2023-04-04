@@ -16,7 +16,7 @@ public class SSSWolfSpawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine("summonWolf");
+        StartCoroutine(summonWolf());
     }
 
     // Update is called once per frame

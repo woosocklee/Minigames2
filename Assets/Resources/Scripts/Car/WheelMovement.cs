@@ -26,11 +26,11 @@ public class WheelMovement : MonoBehaviour
 
     void RotFront()
     {
-        this.transform.rotation *= Quaternion.Euler(new Vector3(0, 1, 0) * speed * Time.deltaTime);
+        this.transform.rotation *= Quaternion.Euler(new Vector3(0, -1, 0) * speed * Time.deltaTime);
     }
     void RotBack()
     {
-        this.transform.rotation *= Quaternion.Euler(new Vector3(0, -1, 0) * speed * Time.deltaTime);
+        this.transform.rotation *= Quaternion.Euler(new Vector3(0, 1, 0) * speed * Time.deltaTime);
 
     }
 

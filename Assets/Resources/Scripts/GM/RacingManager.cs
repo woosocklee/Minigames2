@@ -10,31 +10,30 @@ public class RacingManager : MonoBehaviour
     public AutoMoving enemy1;
     public AutoMoving enemy2;
 
+    public int WinningLap = 2;
 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(player.lap >= 2)
+        if (player.lap >= WinningLap)
         {
             GameManager.gameManager.thing = "Winner: Player";
             GameManager.gameManager.ChangeScene("99 End");
         }
-        if(enemy1.lap >= 2)
+        if (enemy1.lap >= WinningLap)
         {
             GameManager.gameManager.thing = "Winner: Enemy1";
             GameManager.gameManager.ChangeScene("99 End");
         }
-        if (enemy2.lap >= 2)
+        if (enemy2.lap >= WinningLap)
         {
             GameManager.gameManager.thing = "Winner: Enemy2";
             GameManager.gameManager.ChangeScene("99 End");
         }
-
     }
 
     private void OnGUI()

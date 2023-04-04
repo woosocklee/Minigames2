@@ -163,7 +163,8 @@ public class CarMovement : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
             this.oncol = true;
-            this.myrigid.AddForce(Vector3.back,ForceMode.Impulse);
+            //this.myrigid.AddForce(colvec, ForceMode.Impulse);
+            this.transform.position -= this.transform.forward * 2;
         }
     }
 

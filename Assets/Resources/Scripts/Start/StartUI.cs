@@ -23,7 +23,7 @@ public class StartUI : MonoBehaviour
         {
             GameManager.gameManager.ChangeScene("05 Racing");
         }
-        if (GUI.Button(new Rect((Screen.width / 2) - 100, (Screen.height / 2) , 200, 30), "Flappy Bird Game Start"))
+        if (GUI.Button(new Rect((Screen.width / 2) - 100, (Screen.height / 2) , 200, 30), "Floppy Bird Game Start"))
         {
             GameManager.gameManager.ChangeScene("07 FlappyBird");
         }
@@ -38,6 +38,10 @@ public class StartUI : MonoBehaviour
         if (GUI.Button(new Rect((Screen.width / 2) - 100, (Screen.height / 2) + 90, 200, 30), "HideNSeek Game Start"))
         {
             GameManager.gameManager.ChangeScene("13 Hide_And_Seek");
+        }
+        if (GUI.Button(new Rect((Screen.width / 2) - 100, (Screen.height / 2) + 180, 200, 30), "Quit"))
+        {
+            Application.Quit();
         }
     }
 }

@@ -11,6 +11,9 @@ TagManager:
   - Weapon
   - Point
   - Coin
+  - Plane
+  - LapLines
+  - Wall
   layers:
   - Default
   - TransparentFX

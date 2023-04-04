@@ -11,15 +11,23 @@ public class CarBodyRacing : MonoBehaviour
 
     private bool lapchecker;
 
+    public int LineNumber = 0;
+
     private void OnTriggerEnter(Collider other)
     {
         GameObject hitobj = other.gameObject;
 
-        if (hitobj.CompareTag("Finish") && this.lapchecker == true)
+        if (hitobj.CompareTag("Finish") && this.lapchecker == true && LineNumber > 5)
         {
             Debug.Log("트리거콜리전 입장");
             this.lap++;
             this.lapchecker = false;
+            LineNumber = 0;
+        }
+        else if(hitobj.CompareTag("LapLines"))
+        {
+            Debug.Log("LapLine과 부딪힘");
+            LineNumber = other.gameObject.GetComponent<LapChecker>().Count;
         }
     }
 
@@ -48,11 +56,5 @@ public class CarBodyRacing : MonoBehaviour
     {
         this.lap = 0;
         this.lapchecker = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

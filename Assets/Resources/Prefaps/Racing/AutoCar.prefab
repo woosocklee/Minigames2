@@ -619,8 +619,9 @@ MonoBehaviour:
   FrontS: {fileID: 4161635853977948276}
   lap: 0
   mybody: {fileID: 2357314638862416679}
-  movespeed: 15
+  Accelspeed: 10
   rotspeed: 45
+  maxmovespeed: 10
 --- !u!54 &4706446690281468479
 Rigidbody:
   m_ObjectHideFlags: 0
