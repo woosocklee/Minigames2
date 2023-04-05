@@ -154,7 +154,7 @@ public class SPlayerControl : MonoBehaviour
 
     void Animation_Play_3()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             this.myrigid.velocity = new Vector3(0, 0, 0);
             if (spartanKing.IsPlaying("attack") != true)
